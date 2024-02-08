@@ -1,0 +1,19 @@
+[
+    {
+        "create": "app",
+        "validator": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": ["name", "secret"],
+                "properties": {
+                    "name": {
+                        "bsonType": "string"
+                    },
+                    "secret": {
+                        "bsonType": "string"
+                    }
+                }
+            }
+        }
+    }
+]

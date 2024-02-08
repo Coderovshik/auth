@@ -1,0 +1,6 @@
+[
+    {
+        "dropIndexes": "user",
+        "index": "unique_email"
+    }
+]

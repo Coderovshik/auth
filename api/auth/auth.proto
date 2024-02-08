@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "github.com/Coderovshik/auth/pkg/auth;auth";
+
+service Auth {
+    rpc Register (RegisterRequest) returns (RegisterResponse);
+    rpc Login (LoginRequest) returns (LoginResponse);
+    rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+}
+
+// auxilary
+
+message UserInfo {
+    string email = 1;
+    string password = 2;
+}
+
+message AppInfo {
+    string id = 1;
+}
+
+// Register procedure
+
+message RegisterRequest {
+    UserInfo info = 1;
+}
+
+message RegisterResponse {
+    string user_id = 1;
+}
+
+// Login procedure
+
+message LoginRequest {
+    UserInfo user_info = 1;
+    AppInfo app_info = 2;
+}
+
+message LoginResponse {
+    string token = 1;
+}
+
+// IsAdmin procedure
+
+message IsAdminRequest {
+    string user_id = 1;
+}
+
+message IsAdminResponse {
+    bool is_admin = 1;
+}

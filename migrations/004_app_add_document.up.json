@@ -1,0 +1,12 @@
+[
+    {
+        "insert": "app",
+        "documents": [
+            {
+                "_id": 1,
+                "name": "test",
+                "secret": "test-secret"
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "create": "user",
+        "validator": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": ["email", "pass_hash"],
+                "properties": {
+                    "email": {
+                        "bsonType": "string"
+                    },
+                    "pass_hash": {
+                        "bsonType": "array"
+                    },
+                    "is_admin": {
+                        "bsonType": "bool"
+                    }
+                }
+            }
+        }
+    }
+]
